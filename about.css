@@ -84,12 +84,23 @@ nav.fa{
     display: none;
 }
 .text{
+    width: 90%;
     color: #fff;
-    font-size: 20px;
-    opacity: 1;
-    left: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
-
+    z-index: 2;
+}
+.text h1{
+    font-size: 45px;
+}
+.text p{
+    font-size: 20px;
+}
+.text h2{
+    font-size: 35px;
 }
 
 
