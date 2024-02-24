@@ -73,7 +73,7 @@ nav.fa{
     position: relative;
     width: 100%;
     height: 75vh;
-    opacity: 0.5;
+    opacity: 0.3;
     z-index: -4;
    
 }
@@ -82,6 +82,14 @@ nav.fa{
 }
 .toggle_btn{
     display: none;
+}
+.text{
+    color: #fff;
+    font-size: 20px;
+    opacity: 1;
+    left: 0;
+    text-align: center;
+
 }
 
 
