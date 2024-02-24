@@ -1,67 +1,157 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="veiwport" content="with=device-width, initial-scale=1.0">
-    <title>OANSH Media Hub About</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/mhlo.png" />
-</head>
-<body>
-    <section class="header">
-        <nav>
-            <a href="index.html"><img src="images/scllo.png"></a>
-            <div class="nav-links">
-            
-                <ul>
-                    <li><a href="https://oan-mediahub.github.io/test/" >Home</a></li>
-                    <li><a href="https://oan-mediahub.github.io/test/comp.html" >Competitions</a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="https://oshwal-my.sharepoint.com/:f:/g/personal/oa07139_oshwalacademy_sc_ke/EnIlEBUGL2lCmZTWTgwMD1MBY6Fl3G9VJb63RBziGv45zA?e=1tJhhk" target="_blank">Server</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-
-            </div>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
+*{
+    margin: 0;
+    padding: 0;
     
-    <div class="back-pick">
-        <a href="index.html"><img src="images/mhlo.png"></a>
-    </div>
-    <div class="dropdown_menu">
-        <li><a href="https://oan-mediahub.github.io/test/" >Home</a></li>
-        <li><a href="https://oan-mediahub.github.io/test/comp.html" >Competitions</a></li>
-        <li><a href="">Gallery</a></li>
-        <li><a href="https://oshwal-my.sharepoint.com/:f:/g/personal/oa07139_oshwalacademy_sc_ke/EnIlEBUGL2lCmZTWTgwMD1MBY6Fl3G9VJb63RBziGv45zA?e=1tJhhk" >Server</a></li>
-        <li><a href="">Contact</a></li>
+}
+.copy h3{
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    
+    }
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/bgmpic.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    z-index: 2;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #FF8C00;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+nav.fa{
+    display: none;
+}
+
+
+.back-pick{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.back-pick img {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    opacity: 0.5;
+    z-index: -4;
+   
+}
+.dropdown_menu{
+    display: none;
+}
+.toggle_btn{
+    display: none;
+}
+
+
+@media(max-width: 992px){
+    .back-pick img{
+        height: 50%;
+    }
+    .nav-links{
+        display: none;
+    }
+    .toggle_btn{
+        color: #fff;
+        font-size: 3rem;
+        cursor: pointer;
+        display: block;
+        background-color: #FF8C00;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+
+    .dropdown_menu{
+        text-align: left;
+        display: block;
+        position: absolute;
+        right: 2rem;
+        height: 0;
+        top: 180px;
+        width: 400px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         
-
-    </div>
+    }
+    .dropdown_menu.open{
+        height: 500px;
+    }
         
-    <div class="copy">
-         <h3>© 2024 OANSH - Media Hub. All rights reserved.</h3>
-    <div>
-
-
-
-    </section>
-
-
-    <script>
-        const toggleBtn = document.querySelector(".toggle_btn")
-        const toggleBtnIcon = document.querySelector(".toggle_btn i")
-        const dropDownMenu = document.querySelector(".dropdown_menu")
-
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle("open")
-        }
-         
-
+ 
+    .dropdown_menu li{
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         
-    </script>
+    }
+    li{
+        list-style: none;
 
-</body>
-</html>
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 2.5rem;
+
+    }
+    a:hover{
+        color: #FF8C00;
+        transition: 0.5s;
+    }
+    .nav{
+        display: flex;
+        padding: 6% 6%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+}
