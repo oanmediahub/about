@@ -32,7 +32,7 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
-    z-index: 2;
+    z-index: 4;
 }
 .nav-links ul li{
     list-style: none;
@@ -150,6 +150,7 @@ nav.fa{
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 4;
         
     }
     li{
