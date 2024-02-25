@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -32,7 +33,7 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
-    z-index: 4;
+    z-index: 2;
 }
 .nav-links ul li{
     list-style: none;
@@ -87,7 +88,7 @@ nav.fa{
     width: 90%;
     color: #fff;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -96,12 +97,11 @@ nav.fa{
 .text h1{
     font-size: 45px;
 }
-.text p{
-    font-size: 20px;
-}
 .text h2{
-    font-size: 35px;
+    font-size: 40px;
 }
+
+
 
 
 @media(max-width: 992px){
@@ -150,7 +150,6 @@ nav.fa{
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 4;
         
     }
     li{
@@ -175,3 +174,4 @@ nav.fa{
     }
     
 }
+
