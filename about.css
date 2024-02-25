@@ -171,6 +171,14 @@ nav.fa{
         justify-content: space-between;
         align-items: center;
     }
+    .text h1{
+    font-size: 55px;
+    }
+    .text h2{
+        font-size: 50px;
+    }
+    .text p{
+        font-size: 25px
     
 }
 
