@@ -142,6 +142,8 @@ nav.fa{
     }
     .dropdown_menu.open{
         height: 500px;
+        z-index: 4;
+
     }
         
  
